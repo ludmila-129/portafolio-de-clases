@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440">
+  <g fill="none" stroke="#f4efe6" stroke-opacity="0.09" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+
+    <g transform="translate(40,50) rotate(-6)">
+      <path d="M0 6 C 14 -4, 28 -4, 40 6 L 40 34 C 28 25, 14 25, 0 34 Z"/>
+      <path d="M40 6 C 52 -4, 66 -4, 80 6 L 80 34 C 66 25, 52 25, 40 34 Z"/>
+      <path d="M40 6 L 40 34"/>
+    </g>
+
+    <g transform="translate(180,30) rotate(18)">
+      <path d="M0 30 L 46 30 L 58 18 L 12 18 Z"/>
+      <path d="M0 30 L 6 40 L 12 30"/>
+      <circle cx="52" cy="24" r="4"/>
+    </g>
+
+    <g transform="translate(300,70) rotate(-10)">
+      <path d="M20 0 L 25 14 L 40 14 L 28 23 L 32 38 L 20 29 L 8 38 L 12 23 L 0 14 L 15 14 Z"/>
+    </g>
+
+    <g transform="translate(60,180) rotate(8)">
+      <path d="M20 6 C 6 6, 4 22, 14 32 C 20 38, 26 34, 26 28"/>
+      <path d="M26 6 C 12 -2, 2 10, 6 22"/>
+      <path d="M20 6 C 18 0, 22 -4, 26 -6"/>
+    </g>
+
+    <g transform="translate(220,150) rotate(4)">
+      <path d="M0 0 L 34 0 L 34 44 L 0 44 Z"/>
+      <path d="M0 12 L 34 12"/>
+      <path d="M17 0 L 17 12"/>
+      <circle cx="17" cy="30" r="8"/>
+      <path d="M13 30 L 21 30 M17 26 L 17 34"/>
+    </g>
+
+    <g transform="translate(340,190) rotate(-14)">
+      <path d="M0 40 L 40 0"/>
+      <path d="M6 40 L 0 40 L 0 34"/>
+      <path d="M40 6 L 40 0 L 34 0"/>
+      <path d="M10 30 L 16 36 M18 22 L 24 28 M26 14 L 32 20"/>
+    </g>
+
+    <g transform="translate(30,300) rotate(10)">
+      <path d="M14 40 C 14 20, 4 16, 4 4 C 4 -4, 24 -4, 24 4 C 24 16, 14 20, 14 40 Z"/>
+      <path d="M14 4 L 14 -4"/>
+      <path d="M10 -4 C 10 -10, 18 -10, 18 -4"/>
+    </g>
+
+    <g transform="translate(150,290) rotate(-8)">
+      <rect x="0" y="0" width="44" height="34" rx="4"/>
+      <path d="M0 10 L 44 10"/>
+      <path d="M10 0 L 10 10 M34 0 L 34 10"/>
+    </g>
+
+    <g transform="translate(260,320) rotate(12)">
+      <path d="M0 0 L 20 -6 L 20 6 Z"/>
+      <path d="M0 0 L 6 20 L -6 20 Z" transform="translate(20,0)"/>
+      <circle cx="10" cy="0" r="3"/>
+    </g>
+
+    <g transform="translate(360,340) rotate(-4)">
+      <path d="M0 20 C 0 8, 10 0, 22 0 C 34 0, 44 8, 44 20"/>
+      <path d="M0 20 L 44 20"/>
+      <path d="M18 20 L 18 28 M26 20 L 26 28"/>
+    </g>
+
+  </g>
+</svg>
