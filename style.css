@@ -1,0 +1,181 @@
+/* ───────────────────────────────────────────────────────────
+   Tokens
+   ─────────────────────────────────────────────────────────── */
+:root {
+  --pizarra:        #1f3a34; /* verde pizarra, fondo principal   */
+  --pizarra-honda:   #16302b; /* sombra / profundidad             */
+  --tiza:            #f4efe6; /* blanco tiza, texto principal     */
+  --tiza-suave:       #cfe0da; /* texto secundario sobre pizarra   */
+  --mostaza:          #e3a73b; /* tiza amarilla                    */
+  --azul-tiza:        #6fa3b8; /* tiza celeste                     */
+  --coral:            #d97a63; /* tiza roja/coral                  */
+
+  --display: "Caveat", cursive;
+  --texto:   "Work Sans", system-ui, sans-serif;
+  --utilitario: "IBM Plex Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .ficha { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--texto);
+  color: var(--tiza);
+  background: var(--pizarra);
+  background-image:
+    radial-gradient(rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 3px 3px;
+  min-height: 100vh;
+}
+
+/* ───────────────────────────────────────────────────────────
+   Layout
+   ─────────────────────────────────────────────────────────── */
+.pizarra-marco {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+}
+
+.encabezado {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.ojo-tiza {
+  font-family: var(--utilitario);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mostaza);
+  margin: 0 0 0.75rem;
+}
+
+.titulo-tiza {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(3rem, 9vw, 4.5rem);
+  line-height: 1;
+  margin: 0 0 1rem;
+  color: var(--tiza);
+  text-shadow: 0 0 18px rgba(244,239,230,0.15);
+}
+
+.subtitulo {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--tiza-suave);
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+/* ───────────────────────────────────────────────────────────
+   Tablero de fichas
+   ─────────────────────────────────────────────────────────── */
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+.ficha {
+  position: relative;
+  background: var(--tiza);
+  color: var(--pizarra-honda);
+  border-radius: 3px;
+  padding: 1.75rem 1.5rem 1.5rem;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+  transform: rotate(var(--giro, -0.6deg));
+}
+
+.ficha:nth-child(2n)  { --giro: 0.7deg; }
+.ficha:nth-child(3n)  { --giro: -0.3deg; }
+
+.ficha:hover { transform: rotate(0deg) translateY(-3px); }
+
+/* clavito de la ficha, como si estuviera pinchada en el corcho */
+.ficha::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--pin, var(--mostaza));
+  box-shadow: 0 2px 3px rgba(0,0,0,0.35);
+}
+
+.tiza-mostaza { --pin: var(--mostaza); }
+.tiza-azul    { --pin: var(--azul-tiza); }
+.tiza-coral   { --pin: var(--coral); }
+
+.nivel {
+  display: inline-block;
+  font-family: var(--utilitario);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+  background: var(--pin, var(--mostaza));
+  color: var(--pizarra-honda);
+  margin-bottom: 0.85rem;
+}
+
+.ficha h2 {
+  font-family: var(--display);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  margin: 0 0 0.5rem;
+}
+
+.ficha p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #3d4a45;
+  margin: 0 0 1.25rem;
+}
+
+.jugar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--texto);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--pizarra-honda);
+  text-decoration: none;
+  border-bottom: 2px solid var(--pin, var(--mostaza));
+  padding-bottom: 2px;
+}
+
+.jugar span { transition: transform 0.15s ease; }
+.jugar:hover span { transform: translateX(3px); }
+.jugar:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--tiza);
+  outline-offset: 3px;
+}
+
+/* ───────────────────────────────────────────────────────────
+   Pie
+   ─────────────────────────────────────────────────────────── */
+.pie {
+  margin-top: 3.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--tiza-suave);
+  opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  .pizarra-marco { padding: 2.75rem 1.25rem 2.5rem; }
+  .titulo-tiza { font-size: 2.75rem; }
+}

@@ -4,166 +4,55 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Proyectos de español</title>
-<style>
-  :root {
-    --paper: #fbf9f4;
-    --ink: #2b2b28;
-    --ink-soft: #6b6b63;
-    --pen: #a6372c;
-    --line: #dedad0;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Georgia', 'Iowan Old Style', serif;
-    line-height: 1.5;
-  }
-
-  main {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 5rem 1.5rem 4rem;
-  }
-
-  header {
-    margin-bottom: 3.5rem;
-  }
-
-  .eyebrow {
-    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--pen);
-    margin: 0 0 0.6rem;
-  }
-
-  h1 {
-    font-size: 2.1rem;
-    font-weight: 400;
-    margin: 0;
-    letter-spacing: -0.01em;
-  }
-
-  h1 span {
-    display: block;
-    font-style: italic;
-    color: var(--ink-soft);
-    font-size: 1.15rem;
-    margin-top: 0.35rem;
-  }
-
-  ul.projects {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid var(--line);
-  }
-
-  li.project {
-    border-bottom: 1px solid var(--line);
-  }
-
-  li.project a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    padding: 1.5rem 0.25rem;
-    position: relative;
-  }
-
-  li.project a:hover .title,
-  li.project a:focus-visible .title {
-    color: var(--pen);
-  }
-
-  li.project a:focus-visible {
-    outline: 2px solid var(--pen);
-    outline-offset: 4px;
-  }
-
-  .title {
-    font-size: 1.3rem;
-    transition: color 0.15s ease;
-  }
-
-  .desc {
-    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
-    font-size: 0.9rem;
-    color: var(--ink-soft);
-    margin-top: 0.3rem;
-  }
-
-  .arrow {
-    position: absolute;
-    right: 0.25rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    color: var(--pen);
-    opacity: 0;
-    transition: opacity 0.15s ease, transform 0.15s ease;
-  }
-
-  li.project a:hover .arrow,
-  li.project a:focus-visible .arrow {
-    opacity: 1;
-    transform: translateY(-50%) translateX(4px);
-  }
-
-  footer {
-    margin-top: 3rem;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 0.8rem;
-    color: var(--ink-soft);
-  }
-
-  @media (max-width: 480px) {
-    main { padding: 3.5rem 1.25rem 3rem; }
-    h1 { font-size: 1.7rem; }
-  }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Work+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-  <header>
-    <p class="eyebrow">Español · material didáctico</p>
-    <h1>Ludmila
-      <span>Juegos y actividades para aprender español</span>
-    </h1>
+<div class="pizarra-marco">
+
+  <header class="encabezado">
+    <p class="ojo-tiza">Español · material didáctico</p>
+    <h1 class="titulo-tiza">Ludmila</h1>
+    <p class="subtitulo">Juegos y actividades para aprender español</p>
   </header>
 
-  <ul class="projects">
-    <li class="project">
-      <a href="https://ludmila-129.github.io/actividades-129.github.io/" target="_blank" rel="noopener">
-        <div class="title">Actividades en español</div>
-        <div class="desc">Ejercicios y actividades interactivas de práctica</div>
-        <span class="arrow">→</span>
-      </a>
-    </li>
-    <li class="project">
-      <a href="https://ludmila-129.github.io/ahorcado/" target="_blank" rel="noopener">
-        <div class="title">El ahorcado</div>
-        <div class="desc">Juego clásico para practicar vocabulario en español</div>
-        <span class="arrow">→</span>
-      </a>
-    </li>
-    <li class="project">
-      <a href="https://ludmila-129.github.io/Wordle-espa-ol/" target="_blank" rel="noopener">
-        <div class="title">Wordle en español</div>
-        <div class="desc">La versión en español del popular juego de palabras</div>
-        <span class="arrow">→</span>
-      </a>
-    </li>
-  </ul>
+  <main class="tablero">
 
-  <footer>
+    <article class="ficha tiza-mostaza">
+      <span class="nivel">Actividades</span>
+      <h2>Actividades en español</h2>
+      <p>Ejercicios y actividades interactivas de práctica.</p>
+      <a class="jugar" href="https://ludmila-129.github.io/actividades-129.github.io/" target="_blank" rel="noopener">
+        Ir a la actividad <span>→</span>
+      </a>
+    </article>
+
+    <article class="ficha tiza-azul">
+      <span class="nivel">Juego</span>
+      <h2>El ahorcado</h2>
+      <p>Juego clásico para practicar vocabulario en español.</p>
+      <a class="jugar" href="https://ludmila-129.github.io/ahorcado/" target="_blank" rel="noopener">
+        Jugar <span>→</span>
+      </a>
+    </article>
+
+    <article class="ficha tiza-coral">
+      <span class="nivel">Juego</span>
+      <h2>Wordle en español</h2>
+      <p>La versión en español del popular juego de palabras.</p>
+      <a class="jugar" href="https://ludmila-129.github.io/Wordle-espa-ol/" target="_blank" rel="noopener">
+        Jugar <span>→</span>
+      </a>
+    </article>
+
+  </main>
+
+  <footer class="pie">
     Hecho con fines educativos.
   </footer>
-</main>
+
+</div>
 </body>
 </html>
