@@ -25,12 +25,10 @@ body {
   margin: 0;
   font-family: var(--texto);
   color: var(--tiza);
-  background-color: var(--pizarra);
+  background: var(--pizarra);
   background-image:
-    radial-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-    url('doodles.svg');
-  background-size: 3px 3px, 440px 440px;
-  background-repeat: repeat, repeat;
+    radial-gradient(rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 3px 3px;
   min-height: 100vh;
 }
 
@@ -44,8 +42,26 @@ body {
 }
 
 .encabezado {
+  position: relative;
   text-align: center;
   margin-bottom: 3.5rem;
+}
+
+.encabezado-doodle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(620px, 140vw);
+  height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.encabezado > * {
+  position: relative;
+  z-index: 1;
 }
 
 .ojo-tiza {
